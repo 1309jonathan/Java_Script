@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(48, 48, 48);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 33vw;
+    color: rgb(235, 235, 228);
+}
+
+section{
+    background-color: rgb(235, 235, 228);
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+#button{
+    background-color: rgb(12, 112, 242);
+    color: rgb(235, 235, 228);
+    border: 0;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.form{
+    border: 0;
+    margin: 8px;
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+}

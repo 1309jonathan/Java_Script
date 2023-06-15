@@ -38,7 +38,7 @@ class Jogador{
 
 const Neymar = new Jogador('Neymar', 'Atacante', 400)
 Neymar.golsMarcados()
-const Renato = new jogador("Renato Augusto", "Meio Campo", 81)
+const Renato = new Jogador("Renato Augusto", "Meio Campo", 81)
 Renato.golsMarcados()
-const Vinicius = new jogador("Vinícius Jr.", "Atacante", 227)
+const Vinicius = new Jogador("Vinícius Jr.", "Atacante", 227)
 Vinicius.golsMarcados()

@@ -67,7 +67,7 @@ class Produto{ //Criação de uma classe pois é caracterizado como um conjunto 
             let imagem = document.createElement('img') //Chamando e chriando a imagem no js
             imagem.src = 'del.png'
             imagem.setAttribute("onclick","produto.Deletar("+this.arrayProdutos[i].id+")") //Criação do atributo (no caso 'onclick') na (imagem) e esse atributo vai chamar uma função
-            // Como o id vai variar, precisamos garantir que ele varie |+garante que ela vai (deletar) a id específica+ 
+            // Como o id vai variar, precisamos garantir que ele varie |+adicionar para garantir que ela vai (deletar) a id específica+ 
             td_acoes.appendChild(imagem) //Vamos adicionar um filho DOM a imagem
         }
     }
@@ -79,9 +79,9 @@ class Produto{ //Criação de uma classe pois é caracterizado como um conjunto 
 
     Deletar(id){
         let tbody = document.getElementById('tbody')
-        for(let i = 0; i < this.arrayProdutos.length; i++){
-            if(this.arrayProdutos[i].id == id){
-                this.arrayProdutos.splice(i, 1) //
+        for(let i = 0; i < this.arrayProdutos.length; i++){ //Vamos percorrer o array que começa no 0 e vamos até o final do nosso arrayProdutos
+            if(this.arrayProdutos[i].id == id){ //Percorrendo todas as informações, caso o arrayProdutos seja igual a id de referência vamos poder (deletar)
+                this.arrayProdutos.splice(i, 1) //Vai deletar a informação da linha, ele deleta o índice na qual é de referência e quantas vezes vamos fazer isso
                 tbody.deleteRow(i) // Apaga a linha 
             }
         }

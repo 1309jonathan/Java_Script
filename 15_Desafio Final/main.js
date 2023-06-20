@@ -1,5 +1,5 @@
 // function addRedBorder(id){
-//     element = document.querySelector("#" + id)
+//     element = document.querySelector(`#${id}`);
 //     element.style.boxShadow = "10px 10px red"
 // }
 
@@ -23,9 +23,11 @@ function highLightCard(selector){
 // checkKeyboardCode()
 
 //Escolha dos ingressos via teclado, digitando 1, 2, 3 ou 4
+const ingressos =[];
+
 function addKeyboardEventListener(){
 
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener( "keydown", (event) => {
 
         var ingresso1 = document.getElementById("quinta");
         var ingresso2 = document.getElementById("sexta");
@@ -63,6 +65,22 @@ function addKeyboardEventListener(){
             ingresso3.classList.remove("card-highLight");
             ingresso4.classList.toggle("card-highLight");
         }
-    },false)
+    },false);
 }
-addKeyboardEventListener()
+
+selectCard = (selector) => {
+    var element = document.querySelector(selector);
+    element.classList.toggle("card-selected");
+    if(ingressos.includes(selector)){
+        ingressos.pop(selector)
+    }else{
+        ingressos.push(selector)
+    }
+}
+
+showSelectedCards = () => {
+    if(ingressos.length > 0){
+        alert("Ingressos selecionados: " + ingressos);
+    }
+}
+addKeyboardEventListener();

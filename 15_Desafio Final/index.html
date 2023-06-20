@@ -47,22 +47,56 @@
         </div>
         <div id="containerFlow">
             <div>
-                <img src="Imagens/quinta.svg" class="img" id="quinta" onmouseover="highLightCard('#quinta')" onmouseout="highLightCard('#quinta')">
+                <img 
+                src="Imagens/quinta.svg" 
+                class="img" 
+                id="quinta"
+                onclick="selectCard('#quinta')" 
+                onmouseover="highLightCard('#quinta')" 
+                onmouseout="highLightCard('#quinta')"
+                />
             </div>
             <div>
-                <img src="Imagens/sexta.svg" class="img" id="sexta" onmouseover="highLightCard('#sexta')" onmouseout="highLightCard('#sexta')">
+                <img 
+                src="Imagens/sexta.svg" 
+                class="img" 
+                id="sexta" 
+                onclick="selectCard('#sexta')" 
+                onmouseover="highLightCard('#sexta')" 
+                onmouseout="highLightCard('#sexta')"
+                />
             </div>
             <div>
-                <img src="Imagens/sabado.svg" class="img" id="sabado" onmouseover="highLightCard('#sabado')" onmouseout="highLightCard('#sabado')">
+                <img 
+                src="Imagens/sabado.svg" 
+                class="img" 
+                id="sabado" 
+                onclick="selectCard('#sabado')" 
+                onmouseover="highLightCard('#sabado')" 
+                onmouseout="highLightCard('#sabado')"
+                />
             </div>
             <div> 
-                <img src="Imagens/domingo.svg" class="img" id="domingo" onmouseover="highLightCard('#domingo')" onmouseout="highLightCard('#domingo')">
+                <img 
+                src="Imagens/domingo.svg" 
+                class="img" 
+                id="domingo" 
+                onclick="selectCard('#domingo')" 
+                onmouseover="highLightCard('#domingo')" 
+                onmouseout="highLightCard('#domingo')"
+                />
             </div>
             <div>
-                <button id="button">GARANTA O SEU!</button>
+                <button id="button" onclick="showSelectedCards()">GARANTA O SEU!</button>
             </div>
         </div>
     </footer>
+    <div id="rodape">
+        <form action="http://www.google.com">
+            <input type="email" placeholder="Insira seu e-mail" required/>
+            <input type="submit"/>
+        </form>
+    </div>
     <script src="index.js"></script>
     <script src="main.js"></script>
 </body>
